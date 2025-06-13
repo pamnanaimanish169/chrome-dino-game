@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dino Game Runner | Home</title>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script>
+    function toggleModal(show) {
+      const modal = document.getElementById("modal");
+      modal.classList.toggle("hidden", !show);
+    }
+  </script>
+
+  <style>
+    :root {
+      --blog-bg: #FFF5F4;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .blink {
+      animation: blink 0.9s infinite;
+    }
+  </style>
+</head>
+
+<body class="flex flex-col h-screen justify-between items-center bg-gradient-to-b from-pink-50 to-white">
+  <!-- Header -->
+  <header class="sticky top-0 flex justify-between p-6 shadow-sm w-full bg-white z-11">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="space-x-4 text-sm sm:text-base">
+        <a href="/" class="hover:text-blue-500 transition">Home</a>
+        <a href="/history.html" class="hover:text-blue-500 transition">History</a>
+        <a href="/contact.html" class="hover:text-blue-500 transition">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex justify-center items-center py-16 px-4 pt-24 w-full">
+    <!-- Dino Game -->
+    <div class="world" data-world>
+      <div class="highscore" data-Highscore>
+        <span class="high">HI</span> 10000
+      </div>
+      <div class="separator">|</div>
+      <div class="score" data-score>0</div>
+      <div class="start-screen" data-start-screen>Press any key to Start</div>
+      <img src="images/ground.png" class="ground" data-ground />
+      <img src="images/ground.png" class="ground" data-ground />
+      <img src="images/clouds.png" class="clouds" data-clouds />
+      <img src="images/clouds.png" class="clouds" data-clouds />
+      <img src="images/dino-stationary.png" class="dino" data-dino />
+    </div>
+  </main>
+
+  <div>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+      <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full relative">
+        <!-- Close Button -->
+        <button onclick="toggleModal(false)"
+          class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 hover:cursor-pointer">
+          &times;
+        </button>
+
+        <!-- Modal Content -->
+        <h2 class="text-xl m-2 p-4 text-center"> Quick Start </h2>
+          <article
+            class="flex flex-col justify-between items-center flex-wrap gap-4 m-2 text-center bg-[var(--blog-bg)] border-2 border-black rounded-sm p-6">
+            <p>
+              Press Space to make the dinosaur jump! 
+            </p>
+          </article>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
