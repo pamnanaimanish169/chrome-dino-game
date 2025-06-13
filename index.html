@@ -5,7 +5,18 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dino Game Runner | Home</title>
+  <meta name="description" content="Play the classic Chrome Dino Game online. Fun, fast, and free for all ages!">
+
+  <meta property="og:title" content="Play Chrome Dino Game Online – Run, Jump & Beat Your High Score!">
+  <meta property="og:description" content="Play the classic Chrome Dino Game online. Fun, fast, and free for all ages!">
+  <meta property="og:image" content="https://dinogamerunner.in/images/dino.png">
+  <meta property="og:url" content="https://dinogamerunner.in">
+  <meta property="og:type" content="website">
+
+  <!-- Needs to be updated manually -->
+  <meta property="og:updated_time" content="2025-06-13T11:00:00+00:00"> 
+
+  <title>Play Chrome Dino Game Online – Run, Jump & Beat Your High Score!</title>
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,6 +30,18 @@
       modal.classList.toggle("hidden", !show);
     }
   </script>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Chrome Dino Runner",
+    "url": "https://dinogamerunner.in/",
+    "description": "Play the classic Chrome Dino Game online. Fun, fast, and free for all ages!"
+  }
+  </script>
+
 
   <style>
     :root {
@@ -64,11 +87,11 @@
       <div class="separator">|</div>
       <div class="score" data-score>0</div>
       <div class="start-screen" data-start-screen>Press any key to Start</div>
-      <img src="images/ground.png" class="ground" data-ground />
-      <img src="images/ground.png" class="ground" data-ground />
-      <img src="images/clouds.png" class="clouds" data-clouds />
-      <img src="images/clouds.png" class="clouds" data-clouds />
-      <img src="images/dino-stationary.png" class="dino" data-dino />
+      <img src="images/ground.png" class="ground" alt="ground" data-ground />
+      <img src="images/ground.png" class="ground" alt="ground" data-ground />
+      <img src="images/clouds.png" class="clouds" alt="clouds" data-clouds />
+      <img src="images/clouds.png" class="clouds" alt="clouds" data-clouds />
+      <img src="images/dino-stationary.png" class="dino" alt="dino" data-dino />
     </div>
   </main>
 
@@ -84,13 +107,13 @@
         </button>
 
         <!-- Modal Content -->
-        <h2 class="text-xl m-2 p-4 text-center"> Quick Start </h2>
-          <article
-            class="flex flex-col justify-between items-center flex-wrap gap-4 m-2 text-center bg-[var(--blog-bg)] border-2 border-black rounded-sm p-6">
-            <p>
-              Press Space to make the dinosaur jump! 
-            </p>
-          </article>
+        <h1 class="text-xl m-1 p-4 text-center"> Quick Start </h1>
+        <article
+          class="flex flex-col justify-between items-center flex-wrap gap-4 m-2 text-center bg-[var(--blog-bg)] border-2 border-black rounded-sm p-6">
+          <p>
+            Press Space to make the dinosaur jump!
+          </p>
+        </article>
       </div>
     </div>
   </div>
